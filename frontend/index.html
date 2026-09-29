@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Promise Enterprise | Student Wi-Fi</title>
+  <meta name="description" content="Affordable Wi-Fi packages for students. Promise Enterprise.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="demo-pill" id="demoPill">DEMO MODE</div>
+
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">P</span><span>Promise<span>Enterprise</span></span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#packages">Packages</a>
+      <a href="#how">How it works</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#support">Support</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> STUDENT CONNECTIVITY</div>
+        <h1>Fast Wi-Fi.<br><em>Made for students.</em></h1>
+        <p>Stay connected to classes, research, entertainment and friends with simple hourly, daily and monthly packages.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#packages">Buy Wi-Fi now →</a>
+          <a class="btn ghost" href="#how">How it works</a>
+        </div>
+        <div class="stats">
+          <div><strong>24/7</strong><span>Connectivity</span></div>
+          <div><strong>KES</strong><span>Student pricing</span></div>
+          <div><strong>STK</strong><span>M-PESA payment</span></div>
+        </div>
+      </div>
+      <div class="signal-card">
+        <div class="orb"><div class="wifi-icon">⌁</div></div>
+        <div class="signal-lines"><i></i><i></i><i></i><i></i></div>
+        <div class="signal-label"><span class="online-dot"></span> Network ready</div>
+      </div>
+    </section>
+
+    <section id="packages" class="section">
+      <div class="section-head">
+        <div><div class="eyebrow">CHOOSE YOUR PLAN</div><h2>Wi-Fi packages</h2></div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="hourly">Hourly</button>
+          <button class="filter" data-filter="daily">Daily</button>
+          <button class="filter" data-filter="monthly">Monthly</button>
+        </div>
+      </div>
+      <div id="packageGrid" class="package-grid"></div>
+    </section>
+
+    <section id="how" class="section alt">
+      <div class="section-head"><div class="eyebrow">SIMPLE PROCESS</div><h2>Get online in a few steps</h2></div>
+      <div class="steps">
+        <article><b>01</b><h3>Choose a package</h3><p>Pick the duration that fits your study, browsing or entertainment needs.</p></article>
+        <article><b>02</b><h3>Pay with M-PESA</h3><p>Enter your number and use the secure M-PESA prompt sent to your phone.</p></article>
+        <article><b>03</b><h3>Connect</h3><p>After confirmed payment, your access details are displayed in the portal.</p></article>
+      </div>
+    </section>
+
+    <section id="coverage" class="section">
+      <div class="coverage-card">
+        <div><div class="eyebrow">COVERAGE</div><h2>Check your access point</h2><p>Coverage depends on the actual Promise Enterprise network deployment. Add your live access points here when they are installed.</p><button class="btn primary" onclick="showToast('Coverage map placeholder — add deployed access points when ready.')">View coverage</button></div>
+        <div class="map-placeholder"><span>⌖</span><small>NETWORK MAP</small></div>
+      </div>
+    </section>
+
+    <section id="support" class="section alt">
+      <div class="section-head"><div class="eyebrow">NEED HELP?</div><h2>Support</h2></div>
+      <div class="support-grid">
+        <a href="mailto:promisemutuma0@gmail.com"><span>✉</span><strong>Email</strong><small>promisemutuma0@gmail.com</small></a>
+        <a href="#packages"><span>◎</span><strong>Packages</strong><small>Choose a plan</small></a>
+        <a href="#dashboard"><span>▣</span><strong>My account</strong><small>Check your access</small></a>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <div class="dashboard">
+        <div class="section-head"><div><div class="eyebrow">CUSTOMER PORTAL</div><h2>My Wi-Fi</h2></div></div>
+        <div id="dashboardContent" class="dashboard-empty">Make a demo purchase to see your active package and access credentials here.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><a class="brand" href="#home"><span class="brand-mark">P</span><span>Promise<span>Enterprise</span></span></a><p>Fast. Affordable. Always Connected.</p></div>
+    <div class="footer-links"><a href="#home">Home</a><a href="#packages">Packages</a><a href="#support">Support</a><a href="mailto:promisemutuma0@gmail.com">Contact</a></div>
+    <div><small>© 2026 Promise Enterprise</small></div>
+  </footer>
+
+  <div class="modal-backdrop" id="paymentModal">
+    <div class="modal">
+      <button class="close" id="closeModal">×</button>
+      <div class="eyebrow">M-PESA PAYMENT</div>
+      <h2 id="modalPackage">Package</h2>
+      <div class="price-big" id="modalPrice">KES 0</div>
+      <p id="modalDuration"></p>
+      <label>M-PESA phone number<input id="phone" inputmode="tel" placeholder="07XXXXXXXX" maxlength="13"></label>
+      <button class="btn primary full" id="payBtn">Pay with M-PESA</button>
+      <div id="paymentState" class="payment-state"></div>
+      <p class="tiny">Demo mode simulates payment. Real payment requires configured Daraja credentials and a public HTTPS callback.</p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
